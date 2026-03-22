@@ -596,3 +596,89 @@ h1,h2,h3{ font-family: "Cormorant Garamond", serif; }
     height: 420px;
   }
 }
+
+
+.social-proof-section,
+.google-reviews-section{
+  padding: 82px 0;
+}
+
+.instagram-grid,
+.google-reviews-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.instagram-card,
+.google-review-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.instagram-card img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.instagram-copy{
+  padding: 24px;
+}
+
+.instagram-copy h3,
+.google-review-card h3{
+  font-size: 2rem;
+  line-height: 1.05;
+  margin: 10px 0;
+}
+
+.instagram-copy p,
+.google-review-card p{
+  color: var(--muted);
+}
+
+.instagram-card-cta,
+.review-cta-card{
+  display: flex;
+  align-items: center;
+}
+
+.instagram-card-cta .instagram-copy,
+.review-cta-card{
+  width: 100%;
+}
+
+.google-review-card{
+  padding: 26px;
+}
+
+.review-topline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.google-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #f3ede7;
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px){
+  .instagram-grid,
+  .google-reviews-grid{
+    grid-template-columns: 1fr;
+  }
+}
