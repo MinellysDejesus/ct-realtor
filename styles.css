@@ -1339,3 +1339,66 @@ h1,h2,h3{ font-family: "Cormorant Garamond", serif; }
     min-height:0;
   }
 }
+
+
+/* Instagram hover upgrade */
+.insta-image{
+  position: relative;
+  display:block;
+  overflow:hidden;
+  border-radius: 22px 22px 0 0;
+}
+
+.insta-image img{
+  width:100%;
+  display:block;
+  transition: transform 0.55s ease, filter 0.45s ease;
+}
+
+.insta-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(30,24,20,0.08) 0%, rgba(30,24,20,0.35) 100%);
+  opacity:0;
+  transition: opacity 0.35s ease;
+}
+
+.insta-icon{
+  width:64px;
+  height:64px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(10px);
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.38);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  transform: translateY(10px) scale(0.92);
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.instagram-card:hover .insta-image img,
+.instagram-card:focus-within .insta-image img{
+  transform: scale(1.05);
+  filter: saturate(1.02);
+}
+
+.instagram-card:hover .insta-overlay,
+.instagram-card:focus-within .insta-overlay{
+  opacity:1;
+}
+
+.instagram-card:hover .insta-icon,
+.instagram-card:focus-within .insta-icon{
+  transform: translateY(0) scale(1);
+}
+
+.instagram-card .insta-image:focus-visible{
+  outline: 3px solid rgba(185,150,122,0.55);
+  outline-offset: 4px;
+}
