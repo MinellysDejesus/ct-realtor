@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seller Onboarding | Minellys Dejesus</title>
-  <meta name="description" content="Complete Minellys Dejesus' seller onboarding questionnaire so she can learn more about your home, your timing, and your selling goals in Connecticut." />
+  <title>Renter Onboarding | Minellys Dejesus</title>
+  <meta name="description" content="Complete Minellys Dejesus' renter onboarding questionnaire so she can help you find the right rental in Connecticut." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -51,23 +51,23 @@
   <main>
     <section class="page-hero onboarding-hero">
       <div class="container narrow">
-        <p class="eyebrow">SELLER ONBOARDING</p>
-        <h1>Let’s learn more about your home and your goals</h1>
-        <p class="page-intro">Complete this seller questionnaire so Minellys can better understand your property, timing, pricing expectations, and the support you’re looking for.</p>
+        <p class="eyebrow">RENTER ONBOARDING</p>
+        <h1>Let’s learn more about your rental search</h1>
+        <p class="page-intro">Complete this renter questionnaire so Minellys can better understand your budget, timeline, preferred towns, and the type of rental that fits your next move.</p>
       </div>
     </section>
 
     <section class="content-section">
       <div class="container narrow">
         <div class="onboarding-note">
-          <p><strong>What to expect:</strong> This form helps start the conversation and gives Minellys the information she needs to prepare for a thoughtful seller consultation.</p>
+          <p><strong>What to expect:</strong> This form helps Minellys prepare for a thoughtful renter consultation and guide you toward rental options that make sense for your needs.</p>
         </div>
 
         <form class="contact-form onboarding-form" action="https://formsubmit.co/minellysd61@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Seller Onboarding Lead - Minellys Website">
+          <input type="hidden" name="_subject" value="New Renter Onboarding Lead - Minellys Website">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://YOURUSERNAME.github.io/minellys-website/thank-you.html">
+          <input type="hidden" name="_next" value="https://YOURUSERNAME.github.io/minellys-website/renter-thank-you.html">
 
           <div class="form-grid">
             <label>
@@ -90,92 +90,64 @@
               <input type="email" name="Email" required>
             </label>
 
-            <label class="full-span">
-              Property Address *
-              <input type="text" name="Property Address" required>
-            </label>
-
             <label>
-              Are you currently living at the home? *
-              <select name="Currently Living at Home" required>
+              Are you already working with an agent? *
+              <select name="Already Working With an Agent" required>
                 <option value="">Select one</option>
                 <option>Yes</option>
                 <option>No</option>
-                <option>Part-time</option>
+                <option>Not currently, but I have in the past</option>
               </select>
             </label>
 
             <label>
-              How did you hear about us?
-              <input type="text" name="How Did You Hear About Us">
+              What’s your maximum budget for a rental? *
+              <input type="text" name="Maximum Rental Budget" required>
             </label>
 
             <label>
-              Are you speaking to any other brokers? *
-              <select name="Speaking to Other Brokers" required>
+              When are you looking to move in? *
+              <input type="text" name="Move In Timeline" required>
+            </label>
+
+            <label>
+              Do you have any pets? *
+              <select name="Pets" required>
                 <option value="">Select one</option>
-                <option>Yes</option>
-                <option>No</option>
+                <option>No pets</option>
+                <option>Yes - one pet</option>
+                <option>Yes - more than one pet</option>
+                <option>Prefer to discuss</option>
               </select>
             </label>
 
             <label class="full-span">
-              Why are you selling your home?
-              <textarea name="Why Are You Selling Your Home" rows="4"></textarea>
-            </label>
-
-            <label class="full-span">
-              Where are you moving, if you know?
-              <input type="text" name="Where Are You Moving">
-            </label>
-
-            <label class="full-span">
-              What has your experience been like with a real estate agent in the past?
-              <textarea name="Past Real Estate Agent Experience" rows="4"></textarea>
-            </label>
-
-            <label class="full-span">
-              What are the top three most important things to you? (price, timing, convenience, etc.)
-              <textarea name="Top Three Priorities" rows="4"></textarea>
-            </label>
-
-            <label class="full-span">
-              Did you make any improvements to the home? Are there any special features or upgrades? *
-              <textarea name="Improvements Features Upgrades" rows="4" required></textarea>
-            </label>
-
-            <label class="full-span">
-              What do you love most about your home? *
-              <textarea name="What Do You Love Most About Your Home" rows="4" required></textarea>
-            </label>
-
-            <label class="full-span">
-              How much do you owe on the property? i.e. mortgages, liens, etc. *
-              <input type="text" name="Amount Owed on Property" required>
+              What are some cities/towns you are interested in renting?
+              <input type="text" name="Preferred Rental Towns or Cities">
             </label>
 
             <label>
-              What do you envision listing the home for? *
-              <input type="text" name="Envisioned Listing Price" required>
+              What size rental are you looking for? * (Studio, 1 bedroom, 2 bedroom, etc)
+              <input type="text" name="Preferred Rental Size" required>
             </label>
 
             <label>
-              How did you arrive at this price? *
-              <input type="text" name="How Did You Arrive at This Price" required>
+              Are there any properties you already know you are interested in?
+              <input type="text" name="Properties Already Interested In">
             </label>
 
             <label>
-              When do you want to list your home? *
-              <input type="text" name="When Do You Want to List" required>
+              Did someone refer you to me?
+              <input type="text" name="Referral Source">
             </label>
 
             <label class="full-span">
-              What are your top questions or concerns you'd like to address about the process or working together? *
-              <textarea name="Top Questions or Concerns" rows="5" required></textarea>
+              Are there any deal breakers for your rental?
+              <textarea name="Rental Deal Breakers" rows="5"></textarea>
             </label>
           </div>
 
-          <button type="submit" class="btn btn-primary form-btn">Submit Seller Questionnaire</button>
+          <button type="submit" class="btn btn-primary form-btn">Submit Renter Questionnaire</button>
         </form>
       </div>
     </section>
@@ -187,7 +159,7 @@
         <p class="max-text">You can still reach out directly if you’d rather ask questions before filling out the onboarding form.</p>
         <div class="hero-actions center-actions">
           <a class="btn btn-primary" href="contact.html">Contact Minellys</a>
-          <a class="btn btn-secondary" href="sellers.html">Back to Sellers</a>
+          <a class="btn btn-secondary" href="renters.html">Back to Renters</a>
         </div>
       </div>
     </section>
@@ -206,13 +178,8 @@
         <a href="buyer-onboarding.html">Buyer Onboarding</a>
         <a href="sellers.html">Sellers</a>
         <a href="seller-onboarding.html">Seller Onboarding</a>
-        <div class="nav-dropdown">
-          <a href="renters.html" class="nav-parent">Renters</a>
-          <div class="nav-submenu">
-            <a href="renters.html">Renter Tips</a>
-            <a href="renter-onboarding.html">Renter Onboarding</a>
-          </div>
-        </div>
+        <a href="renters.html">Renters</a>
+        <a href="renter-onboarding.html">Renter Onboarding</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
