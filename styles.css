@@ -1244,3 +1244,21 @@ h1,h2,h3{ font-family: "Cormorant Garamond", serif; }
     min-height: 0;
   }
 }
+
+.real-logo{
+  height: 18px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.logo-sub{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-sub .divider{
+  margin: 0 4px;
+  opacity: 0.5;
+}
