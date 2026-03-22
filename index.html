@@ -338,49 +338,119 @@
       </div>
     </section>
 
-    <section class="google-reviews-section">
+    <section class="mortgage-section">
       <div class="container">
         <div class="section-head center">
-          <p class="section-tag">GOOGLE REVIEWS</p>
-          <h2>Trusted by clients across Connecticut</h2>
+          <p class="section-tag">MORTGAGE CALCULATOR</p>
+          <h2>Your mortgage payment insights</h2>
           <p class="max-text">
-            These review cards are styled and ready. Once Minellys has her Google review link, you can replace the button below and swap in her real client reviews.
+            Estimate your monthly payment with a simple breakdown of principal and interest, property taxes, and HOA dues.
+            This tool is for planning purposes and can help buyers start the conversation with more clarity.
           </p>
         </div>
 
-        <div class="google-reviews-grid">
-          <article class="google-review-card">
-            <div class="review-topline">
-              <span class="google-badge">Google</span>
-              <span class="stars">★★★★★</span>
-            </div>
-            <p>
-              “Minellys made everything feel organized and calm. She kept us informed,
-              answered every question, and truly cared about helping us find the right fit.”
-            </p>
-            <strong>Buyer Review Placeholder</strong>
-          </article>
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="mortgage-grid">
+              <label class="mortgage-field">
+                <span>Home Price</span>
+                <input id="homePrice" type="number" min="0" step="1000" value="450000">
+              </label>
 
-          <article class="google-review-card">
-            <div class="review-topline">
-              <span class="google-badge">Google</span>
-              <span class="stars">★★★★★</span>
-            </div>
-            <p>
-              “Professional, responsive, and so easy to work with. Her communication and
-              guidance made the process feel much smoother than we expected.”
-            </p>
-            <strong>Seller Review Placeholder</strong>
-          </article>
+              <label class="mortgage-field">
+                <span>Term</span>
+                <select id="loanTerm">
+                  <option value="30" selected>30-Year Fixed</option>
+                  <option value="20">20-Year Fixed</option>
+                  <option value="15">15-Year Fixed</option>
+                </select>
+              </label>
 
-          <article class="google-review-card review-cta-card">
-            <span class="resource-type">MORE SOCIAL PROOF</span>
-            <h3>Link her full Google reviews here</h3>
-            <p>
-              Once you have her Google review link, this button can take visitors straight to all reviews. For now, this card is a polished placeholder.
+              <label class="mortgage-field mortgage-field-split">
+                <span>Down Payment</span>
+                <div class="split-input">
+                  <input id="downPayment" type="number" min="0" step="1000" value="90000">
+                  <div class="split-pill" id="downPaymentPercent">20%</div>
+                </div>
+              </label>
+
+              <label class="mortgage-field">
+                <span>Property Tax</span>
+                <div class="input-prefix">
+                  <span>$</span>
+                  <input id="propertyTax" type="number" min="0" step="10" value="650">
+                  <small>/month</small>
+                </div>
+              </label>
+
+              <label class="mortgage-field">
+                <span>Interest Rate</span>
+                <div class="input-suffix">
+                  <input id="interestRate" type="number" min="0" step="0.01" value="6.75">
+                  <small>%</small>
+                </div>
+              </label>
+
+              <label class="mortgage-field">
+                <span>HOA Dues</span>
+                <div class="input-prefix">
+                  <span>$</span>
+                  <input id="hoaDues" type="number" min="0" step="10" value="0">
+                  <small>/month</small>
+                </div>
+              </label>
+            </div>
+
+            <p class="mortgage-disclaimer">
+              Estimate only. Actual payment may vary based on taxes, insurance, PMI, interest rate, loan program, and lender terms.
             </p>
-            <a class="btn btn-primary" href="#contact">Ask about working with Minellys</a>
-          </article>
+          </div>
+
+          <div class="mortgage-results-card">
+            <div class="payment-ring-wrap">
+              <div class="payment-ring">
+                <div class="payment-ring-inner">
+                  <strong id="monthlyPayment">$0</strong>
+                  <span>Your Payment</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-breakdown">
+              <div class="payment-row">
+                <div class="payment-label">
+                  <span class="payment-dot payment-dot-primary"></span>
+                  <span>Principal &amp; Interest</span>
+                </div>
+                <div class="payment-value">
+                  <strong id="principalInterestValue">$0</strong>
+                  <span id="principalInterestPercent">0%</span>
+                </div>
+              </div>
+
+              <div class="payment-row">
+                <div class="payment-label">
+                  <span class="payment-dot payment-dot-secondary"></span>
+                  <span>Property Taxes</span>
+                </div>
+                <div class="payment-value">
+                  <strong id="propertyTaxValue">$0</strong>
+                  <span id="propertyTaxPercent">0%</span>
+                </div>
+              </div>
+
+              <div class="payment-row">
+                <div class="payment-label">
+                  <span class="payment-dot payment-dot-tertiary"></span>
+                  <span>HOA Dues</span>
+                </div>
+                <div class="payment-value">
+                  <strong id="hoaValue">$0</strong>
+                  <span id="hoaPercent">0%</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
