@@ -158,3 +158,52 @@ function setupMortgageCalculator() {
 }
 
 setupMortgageCalculator();
+
+
+function setupTestimonials() {
+  const track = document.getElementById('testimonialTrack');
+  const prev = document.getElementById('testimonialPrev');
+  const next = document.getElementById('testimonialNext');
+  const dotsWrap = document.getElementById('testimonialDots');
+  if (!track || !prev || !next || !dotsWrap) return;
+
+  const slides = Array.from(track.querySelectorAll('.testimonial-slide'));
+  let current = 0;
+
+  slides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.className = 'testimonial-dot' + (index === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+    dot.addEventListener('click', () => goTo(index));
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsWrap.querySelectorAll('.testimonial-dot'));
+
+  function render() {
+    track.style.transform = `translateX(-${current * 100}%)`;
+    slides.forEach((slide, index) => slide.classList.toggle('active', index === current));
+    dots.forEach((dot, index) => dot.classList.toggle('active', index === current));
+  }
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    render();
+  }
+
+  prev.addEventListener('click', () => goTo(current - 1));
+  next.addEventListener('click', () => goTo(current + 1));
+
+  let autoRotate = setInterval(() => goTo(current + 1), 7000);
+  [prev, next, track, dotsWrap].forEach((el) => {
+    el.addEventListener('mouseenter', () => clearInterval(autoRotate));
+    el.addEventListener('mouseleave', () => {
+      clearInterval(autoRotate);
+      autoRotate = setInterval(() => goTo(current + 1), 7000);
+    });
+  });
+
+  render();
+}
+
+setupTestimonials();

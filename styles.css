@@ -682,11 +682,70 @@ h1,h2,h3{ font-family: "Cormorant Garamond", serif; }
 .testimonials-section{
   padding: 82px 0;
 }
-.community-grid,
-.testimonial-grid{
+.community-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
+}
+.testimonial-slider{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px;
+  align-items: center;
+}
+.testimonial-viewport{
+  overflow: hidden;
+}
+.testimonial-track{
+  display: flex;
+}
+.testimonial-slide{
+  min-width: 100%;
+  opacity: 0.45;
+  transform: scale(0.98);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.testimonial-slide.active{
+  opacity: 1;
+  transform: scale(1);
+}
+.testimonial-arrow{
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.9);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.testimonial-arrow:hover{
+  transform: translateY(-1px);
+  background: #fff;
+}
+.testimonial-dots{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.testimonial-dot{
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  border: 0;
+  background: #d8cdc2;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.testimonial-dot.active{
+  background: var(--accent-dark);
+  transform: scale(1.15);
 }
 .community-card{
   background: rgba(255,255,255,0.78);
@@ -746,9 +805,14 @@ h1,h2,h3{ font-family: "Cormorant Garamond", serif; }
 @media (max-width: 1024px){
   .hero-grid-upgraded,
   .stats-band,
-  .community-grid,
-  .testimonial-grid{
+  .community-grid{
     grid-template-columns: 1fr;
+  }
+  .testimonial-slider{
+    grid-template-columns: 1fr;
+  }
+  .testimonial-arrow{
+    display: none;
   }
   .hero-visual-stack{
     min-height: auto;
@@ -860,5 +924,11 @@ h1,h2,h3{ font-family: "Cormorant Garamond", serif; }
   .instagram-grid,
   .google-reviews-grid{
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px){
+  .testimonial-card{
+    padding: 24px;
   }
 }
